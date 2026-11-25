@@ -1,0 +1,3 @@
+import Link from 'next/link';
+const links=[['About','/about'],['Services','/services'],['Case studies','/case-studies'],['Insights','/blog'],['Resources','/resources']];
+export default function SiteHeader(){return <header className="site-header"><Link href="/" className="brand">rehmat<span>®</span></Link><nav>{links.map(([n,h])=><Link key={h} href={h}>{n}</Link>)}</nav><Link className="button button-orange header-cta" href="/contact">Let&apos;s talk ↗</Link><details className="mobile-nav"><summary>☰</summary><div>{links.map(([n,h])=><Link key={h} href={h}>{n}</Link>)}<Link href="/contact">Contact</Link></div></details></header>}
