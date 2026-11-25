@@ -1,40 +1,13 @@
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-cream text-ink">
-      <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <a href="/" className="text-xl font-black tracking-tight">Dr<span className="text-orange">Geo.</span></a>
-        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
-          <a href="/case-studies">Case Studies</a>
-          <a href="/blog">Insights</a>
-        </nav>
-        <a href="/contact" className="rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white">Let&apos;s talk ↗</a>
-      </header>
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16 md:grid-cols-[1.05fr_.95fr] md:items-center md:pt-24">
-        <div>
-          <p className="mb-6 inline-flex rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.18em]">GEO · AEO · AI Search</p>
-          <h1 className="max-w-4xl text-6xl font-black leading-[.94] tracking-[-.065em] sm:text-7xl lg:text-[6.5rem]">Be visible where your customers <span className="text-orange">ask AI.</span></h1>
-          <p className="mt-8 max-w-xl text-lg leading-8 text-black/65">Strategic GEO and AEO solutions that help businesses become more discoverable, understandable, and reference-worthy across AI-powered search experiences.</p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href="/services" className="rounded-full bg-ink px-6 py-4 text-sm font-semibold text-white">Explore GEO services ↗</a>
-            <a href="/case-studies" className="rounded-full border border-black/15 px-6 py-4 text-sm font-semibold">View my work</a>
-          </div>
-          <p className="mt-8 text-xs uppercase tracking-[.16em] text-black/45">Independent specialist · Lahore, Pakistan · Working worldwide</p>
-        </div>
-        <div className="relative flex min-h-[420px] items-center justify-center">
-          <div className="absolute right-4 top-4 h-64 w-64 rounded-full bg-orange/90 blur-[1px] md:h-80 md:w-80" />
-          <div className="relative w-full max-w-lg rotate-[-3deg] rounded-[2rem] border border-black/10 bg-white p-4 shadow-2xl shadow-black/10">
-            <div className="flex items-center gap-2 border-b border-black/10 pb-4"><span className="h-2.5 w-2.5 rounded-full bg-orange"/><span className="h-2.5 w-2.5 rounded-full bg-black/15"/><span className="h-2.5 w-2.5 rounded-full bg-black/15"/><span className="ml-auto text-xs text-black/40">AI visibility workspace</span></div>
-            <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-[.16em] text-orange">Search presence overview</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight">Make your expertise easier to find.</h2>
-              <div className="mt-7 space-y-3">{["Clear business entities","Helpful answer-first content","Consistent structured information"].map((item, index) => <div key={item} className="flex items-center gap-3 rounded-xl bg-cream p-4"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-sm font-bold text-white">0{index+1}</span><span className="text-sm font-semibold">{item}</span></div>)}</div>
-            </div>
-          </div>
-          <div className="absolute -bottom-2 -left-2 rounded-2xl border border-black/10 bg-white px-5 py-4 shadow-xl"><p className="text-xs text-black/45">The focus</p><p className="font-bold">Clarity over claims.</p></div>
-        </div>
-      </section>
-    </main>
-  );
-}
+import Link from "next/link";
+import {services,articles} from "@/lib/content";
+export default function HomePage(){return <div className="home-page">
+<section className="hero wrap"><div className="hero-copy"><p className="eyebrow"><span className="eyebrow-dot"/> GEO · AEO · AI SEARCH</p><h1>Be visible where your customers <em>ask AI.</em></h1><p className="hero-lead">Strategic GEO and AEO solutions that help businesses become more discoverable, understandable, and reference-worthy across AI-powered search experiences.</p><div className="hero-actions"><Link className="button button-dark" href="/services">Explore GEO services <span>↗</span></Link><Link className="button button-outline" href="/case-studies">View my work <span>↗</span></Link></div><p className="hero-note">Independent specialist · Lahore, Pakistan · Working worldwide</p></div>
+<div className="hero-art"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="orange-disc"/><div className="dash-path">〰</div><div className="browser-card"><div className="browser-top"><i/><i/><i/><span>YOUR BRAND / AI SEARCH</span></div><div className="browser-content"><small>THE DISCOVERY SHIFT</small><h2>Make your expertise easier to find.</h2><div className="mock-search"><span>⌕</span> Who can help me solve this?</div><div className="mock-result"><b>Clear answers</b><span>Helpful information, structured for people.</span></div><div className="mock-result"><b>Connected expertise</b><span>Consistent brand and service context.</span></div><div className="mock-result"><b>Credible signals</b><span>Evidence that supports what you say.</span></div></div></div><div className="floating-note note-top">Clarity over claims <b>↗</b></div><div className="floating-note note-bottom"><span>01 / 05</span><b>Audit → Research → Strategy</b></div><div className="art-stamp">GEO<br/>AEO<br/><b>↗</b></div></div></section>
+<section className="marquee-band"><div>SEARCH IS CHANGING <span>✳</span> MAKE YOUR BRAND UNDERSTOOD <span>✳</span> ANSWER WITH CLARITY <span>✳</span></div></section>
+<section className="intro-strip wrap"><p className="eyebrow">A smarter search presence</p><h2>It’s not about gaming an algorithm. It’s about making useful information <em>easier to discover.</em></h2><p>AI search experiences combine information from many places. Your website should clearly explain who you are, what you do, who you help and why your information is worth considering.</p></section>
+<section className="services-home section-pad"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">What I can help with</p><h2>Strategy built for<br/><em>how search evolves.</em></h2></div><Link className="text-link" href="/services">Explore all services ↗</Link></div><div className="home-service-grid">{services.slice(0,6).map(([name,desc],i)=><Link href={i===0?"/geo-audit":"/services"} className="home-service" key={name}><span>0{i+1}</span><h3>{name}</h3><p>{desc}</p><b>↗</b></Link>)}</div></div></section>
+<section className="process-section section-pad"><div className="wrap"><p className="eyebrow">A considered process</p><h2>From uncertainty to<br/><em>a clearer next step.</em></h2><div className="process-grid">{[["01","Audit","Understand the current website, content and discoverability foundations."],["02","Research","Explore customer questions, entities and the competitive context."],["03","Strategy","Prioritize the most useful opportunities and define what to measure."],["04","Implementation","Improve pages, structure and content with a clear rationale."],["05","Measurement","Review documented observations and refine the approach over time."]].map(([n,t,d])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></div></section>
+<section className="case-home section-pad"><div className="wrap case-home-inner"><div><p className="eyebrow">Transparent by design</p><h2>Real thinking.<br/><em>Honest evidence.</em></h2><p>Explore a clearly labelled demonstration of how a GEO audit can be structured. No invented client results, performance claims or testimonials.</p><Link className="button button-dark" href="/case-studies">View demonstration ↗</Link></div><div className="case-visual"><div className="case-sheet"><small>DEMONSTRATION / 001</small><b>Discovery<br/>framework</b><div className="case-line"/><span>ACCESSIBILITY · ENTITIES · CONTENT · MEASUREMENT</span></div><div className="case-orange"/></div></div></section>
+<section className="insights-home section-pad"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">Ideas worth understanding</p><h2>Learn the language<br/>of <em>AI search.</em></h2></div><Link className="text-link" href="/blog">Visit the journal ↗</Link></div><div className="article-grid home-articles">{articles.slice(0,3).map(([slug,title,category,intro])=><article className="article-card" key={slug}><div className="article-meta"><span>{category}</span><span>GUIDE</span></div><h2><Link href={"/blog/"+slug}>{title}</Link></h2><p>{intro}</p><Link className="text-link" href={"/blog/"+slug}>Read article ↗</Link></article>)}</div></div></section>
+<section className="faq-section section-pad"><div className="wrap faq-layout"><div><p className="eyebrow">Good questions</p><h2>What businesses<br/>should know.</h2></div><div className="faq-list"><details open><summary>Can GEO guarantee my brand will appear in ChatGPT?</summary><p>No. AI answers can vary by query, platform, location and time. GEO work can improve clarity and usefulness, but no provider can guarantee a mention or recommendation.</p></details><details><summary>Is GEO a replacement for SEO?</summary><p>No. GEO and SEO overlap. Strong technical foundations and helpful content remain important, while GEO adds attention to brand representation and citations in generated answers.</p></details><details><summary>What does a GEO audit include?</summary><p>Depending on scope, it can review website accessibility, entity clarity, content usefulness and documented observations from selected AI-search prompts.</p></details><details><summary>How do you measure AI visibility?</summary><p>Use a repeatable set of prompts and record brand mentions, cited URLs, answer context, platform and test date. Explain sample limitations rather than presenting a universal score.</p></details></div></div></section>
+<section className="final-cta"><div className="wrap"><p className="eyebrow">Your next step starts here</p><h2>Make your expertise<br/>easier to <em>discover.</em></h2><Link className="button button-dark" href="/geo-audit">Start with a GEO audit ↗</Link></div><div className="cta-orb"/></section></div>}
